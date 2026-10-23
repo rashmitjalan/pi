@@ -7,9 +7,11 @@ import { formatTodos, parseGitGrepOutput, scanTodos } from "../src/utils/todos.t
 
 describe("parseGitGrepOutput", () => {
 	test("parses null-separated git grep lines and ignores non-markers", () => {
-		const output = ["src/a.ts\x0012\x00// TODO: fix me", "src/b.ts\x003\x00  FIXME handle error  ", "src/c.ts\x001\x00TODOS"].join(
-			"\n",
-		);
+		const output = [
+			"src/a.ts\x0012\x00// TODO: fix me",
+			"src/b.ts\x003\x00  FIXME handle error  ",
+			"src/c.ts\x001\x00TODOS",
+		].join("\n");
 
 		expect(parseGitGrepOutput(output)).toEqual([
 			{ file: "src/a.ts", line: 12, marker: "TODO", text: "// TODO: fix me" },
