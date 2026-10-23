@@ -28,16 +28,17 @@ function toTodoItem(file: string, line: number, rawText: string): TodoItem | und
 }
 
 /**
- * Parse `git grep -n --null` output. Each line is `path\0lineno:text`.
+ * Parse `git grep -n --null` output. Each line is `path\0lineno\0text`.
  */
 export function parseGitGrepOutput(output: string): TodoItem[] {
 	const items: TodoItem[] = [];
 	for (const entry of output.split("\n")) {
-		const separator = entry.indexOf("\0");
-		if (separator < 0) continue;
-		const match = /^(\d+):(.*)$/.exec(entry.slice(separator + 1));
-		if (!match) continue;
-		const item = toTodoItem(entry.slice(0, separator), Number(match[1]), match[2] ?? "");
+		const fileEnd = entry.indexOf("\0");
+		const lineEnd = fileEnd < 0 ? -1 : entry.indexOf("\0", fileEnd + 1);
+		if (lineEnd < 0) continue;
+		const line = Number(entry.slice(fileEnd + 1, lineEnd));
+		if (!Number.isInteger(line)) continue;
+		const item = toTodoItem(entry.slice(0, fileEnd), line, entry.slice(lineEnd + 1));
 		if (item) items.push(item);
 	}
 	return items;
