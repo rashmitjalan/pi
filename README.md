@@ -204,3 +204,24 @@ MIT
   <br /><br />
   <a href="https://exe.dev"><img src="packages/coding-agent/docs/images/exy.png" alt="Exy mascot" width="48" /><br />exe.dev</a>
 </p>
+R87 item01
+R87 item02
+R87 item03
+R87 item04
+R87 item05
+R87 item06
+R87 item07
+R87 item08
+R87 item09
+R87 item10
+R87 item11
+R87 item12
+R87 item13
+R87 item14
+R87 item15
+R87 item16
+R87 item17
+R87 item18
+R87 item19
+R87 item20
+R87 item21
