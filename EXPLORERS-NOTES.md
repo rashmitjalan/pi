@@ -1,0 +1,5 @@
+Provider selection: ModelsImpl in packages/ai/src/models.ts keeps providers in a Map keyed by provider.id, and getModel(provider, id) returns undefined-equivalent results ([] from getModels) for unknown ids.
+Built-in providers: builtinModels() in packages/ai/src/providers/all.ts registers each createProvider() definition from packages/ai/src/providers/*.ts, and packages/ai/src/auth/resolve.ts applies explicit key, then stored credential, then ambient env auth.
+Tools: coding-agent built-ins live in packages/coding-agent/src/core/tools/ (read.ts, bash.ts, edit.ts, write.ts, grep.ts, find.ts, ls.ts), with the registry and preset groups in tools/index.ts.
+Tests: root npm test runs test:scripts (node --test scripts/*.test.mjs) then each workspace's vitest "test" script, and test.sh runs it in an isolated env with no API keys and PI_NO_LOCAL_LLM=1.
+Gaps: vitest.base.ts only provides @earendil-works/* source aliases with no test block and is not imported by the per-package configs read; e2e gating and the stream dispatch path were not verified.
