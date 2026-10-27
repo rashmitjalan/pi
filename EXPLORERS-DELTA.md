@@ -1,0 +1,5 @@
+- ToolName grep hits in packages/coding-agent/src/core/tools/index.ts: lines 95 (union type), 96 (allToolNames), 118 (createToolDefinition), 141 (createTool), 182 (createAllToolDefinitions), 213 (createAllTools).
+- Tool registry: a closed ToolName union of 8 tools (read, bash, powershell, edit, write, grep, find, ls); name-switch factories return a ToolDefinition or an AgentTool, with presets createCodingTools and createReadOnlyTools.
+- registerBuiltInProviders grep in packages/ai/src: no matches; providers are set up in packages/ai/src/providers/all.ts, where builtinModels() calls models.setProvider() for each builtinProviders() entry.
+- Tool definitions: bash/powershell share createShellToolDefinition, edit/write use withFileMutationQueue, grep uses rg and find uses fd, and output truncation defaults to 2000 lines / 50KB (truncate.ts).
+- Gaps: tool-definition.ts does not exist at that path, the explorer hit its call cap before reading vitest.base.ts, no test files were inspected, and coding-agent tests run via "vitest --run".
