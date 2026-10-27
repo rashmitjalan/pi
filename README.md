@@ -204,7 +204,7 @@ MIT
   <br /><br />
   <a href="https://exe.dev"><img src="packages/coding-agent/docs/images/exy.png" alt="Exy mascot" width="48" /><br />exe.dev</a>
 </p>
-R87D item01
+R87D reviewed01
 R87D item02
 R87D item03
 R87D item04
