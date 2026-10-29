@@ -1,0 +1,25 @@
+ALPHA
+BETA
+Fixture line 03 unchanged
+Fixture line 04 unchanged
+Fixture line 05 unchanged
+Fixture line 06 unchanged
+Fixture line 07 unchanged
+Fixture line 08 unchanged
+Fixture line 09 unchanged
+Fixture line 10 unchanged
+Fixture line 11 unchanged
+Fixture line 12 unchanged
+Fixture line 13 unchanged
+Fixture line 14 unchanged
+Fixture line 15 unchanged
+Fixture line 16 unchanged
+Fixture line 17 unchanged
+Fixture line 18 unchanged
+Fixture line 19 unchanged
+Fixture line 20 unchanged
+Fixture line 21 unchanged
+Fixture line 22 unchanged
+Fixture line 23 unchanged
+Fixture line 24 unchanged
+This deliberately long documentation line exists to verify mobile wrapping inside the Changes drawer without horizontal scrolling and without hiding the comment control from a touch user.
