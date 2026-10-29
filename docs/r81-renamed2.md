@@ -52,3 +52,4 @@ Sections (in order):
 Attribution:
 - Internal: `Fixed foo ([#123](https://github.com/earendil-works/pi/issues/123))`
 - External: `Added bar ([#456](https://github.com/earendil-works/pi/pull/456) by [@user](https://github.com/user))`
+r81 rename check
