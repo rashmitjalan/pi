@@ -205,4 +205,4 @@ MIT
   <a href="https://exe.dev"><img src="packages/coding-agent/docs/images/exy.png" alt="Exy mascot" width="48" /><br />exe.dev</a>
 </p>
 
-r81 lc test
+r81 lc updated
