@@ -204,3 +204,5 @@ MIT
   <br /><br />
   <a href="https://exe.dev"><img src="packages/coding-agent/docs/images/exy.png" alt="Exy mascot" width="48" /><br />exe.dev</a>
 </p>
+
+The monorepo also contains `@earendil-works/pi-codemode` (sandboxed JavaScript execution with injected tools), `@earendil-works/pi-mcp` (a standalone MCP client) and `@earendil-works/pi-env` (remote execution environments over SSH), which `npm run build` compiles with the other packages, plus the private `@earendil-works/pi-evals` eval harness.
